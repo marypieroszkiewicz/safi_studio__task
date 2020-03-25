@@ -1,0 +1,241 @@
+/* ---------------------------------------------------- */
+/* ----- MAIN ----- */
+/* ---------------------------------------------------- */
+
+.main {
+  background-color: $cararra;
+  position: relative;
+}
+
+.place-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-112px);
+  text-transform: uppercase;
+
+  &__box {
+    flex-basis: calc(100% / 4 - 30px);
+    text-align: center;
+    color: $white;
+    position: relative;
+    padding: 1.625rem 1.938rem 1.313rem;
+
+    &--1 {
+      background-color: $venice_blue;
+
+      &::after {
+        border-color: transparent transparent $venice_blue transparent;
+      }
+    }
+
+    &--2 {
+      background-color: $sushi;
+
+      &::after {
+        border-color: transparent transparent $sushi transparent;
+      }
+    }
+
+    &--3 {
+      background-color: $maroon_flush;
+
+      &::after {
+        border-color: transparent transparent $maroon_flush transparent;
+      }
+    }
+
+    &--4 {
+      background-color: $pelorous;
+
+      &::after {
+        border-color: transparent transparent $pelorous transparent;
+      }
+    }
+
+    &-title {
+      padding-bottom: 2.563rem;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+    }
+
+    &-content {
+      display: inline-block;
+      font-size: 0.625rem;
+
+      &__bold {
+        font-weight: bold;
+        text-align: right;
+
+        &::after {
+          content: "|";
+          display: inline-block;
+          transform: translateY(-1px);
+          padding: 0 1.25rem 0 0.4375rem;
+        }
+      }
+
+      &__light {
+        font-weight: 300;
+        text-transform: lowercase;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      border-style: solid;
+      border-width: 0px 18px 18px 18px;
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+      bottom: -18px;
+    }
+
+    &-content {
+      &::before {
+        content: "";
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        position: absolute;
+        width: calc(100% - 60px);
+        left: 50%;
+        transform: translate(-50%, 29px);
+      }
+    }
+  }
+}
+
+.space {
+  padding-bottom: 2.563rem;
+}
+
+.vertical-line {
+  position: relative;
+  top: -1px;
+  padding: 0 0.25rem;
+}
+
+.phone--icon::before {
+  content: "\f879";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 0.4375rem;
+}
+
+.schedule {
+  padding-top: 8.938rem;
+
+  &__title {
+    text-align: center;
+    font-size: 21px;
+    color: $cod_gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.625rem 0 2.438rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 19px 29px;
+
+    &-box {
+      background-color: $white;
+      font-size: 0.75rem;
+
+      &--6 {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        padding: none;
+      }
+
+      &--8 {
+        grid-column: 4;
+        grid-row: 2 / 4;
+      }
+
+      &--9 {
+        grid-column: 1;
+        grid-row: 3 / 5;
+      }
+
+      &--10 {
+        grid-column: 3;
+        grid-row: 3 / 5;
+      }
+
+      &::after {
+        content: "";
+        width: 3px;
+        height: 34px;
+        display: inline-block;
+        transform: translateY(-84px);
+      }
+
+      &--1::after,
+      &--5::after,
+      &--9::after {
+        background-color: $venice_blue;
+      }
+
+      &--2::after,
+      &--6::after,
+      &--11::after {
+        background-color: $sushi;
+      }
+
+      &--3::after,
+      &--7::after,
+      &--10::after {
+        background-color: $maroon_flush;
+      }
+
+      &--4::after,
+      &--8::after,
+      &--12::after {
+        background-color: $pelorous;
+      }
+
+      &__img {
+        height: 150px;
+      }
+
+      &__title {
+        color: $gray;
+        padding: 1.438rem 0 1rem 1.813rem;
+
+        &::before {
+          content: "\f017";
+          display: inline-block;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+          padding-right: 0.5rem;
+        }
+      }
+
+      &__text {
+        color: $armadillo;
+        white-space: pre-line;
+        padding-left: 1.813rem;
+      }
+    }
+  }
+
+  &__btn {
+    color: $white;
+    background-color: $tree_poppy;
+    padding: 1rem 1.938rem;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2.125rem 0 2.563rem;
+  }
+}
+
+/* ----- END OF MAIN ----- */
